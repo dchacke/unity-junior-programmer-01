@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 5.0f;
-    public float turnSpeed;
-    public float forwardInput;
-    public float horizontalInput;
+    private float speed = 20.0f;
+    private float turnSpeed = 45.0f;
+    private float forwardInput;
+    private float horizontalInput;
 
     // Start is called before the first frame update
     void Start()
@@ -21,9 +21,10 @@ public class PlayerController : MonoBehaviour
         forwardInput = Input.GetAxis("Vertical");
         horizontalInput = Input.GetAxis("Horizontal");
 
-        // Move the vehicle forward. Seems like this could be done
-        // in just one method call.
+        // Move the vehicle forward based on vertical input
         transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardInput);
+
+        // Rotate the vehicle based on horizontal input
         transform.Rotate(Vector3.up * Time.deltaTime * turnSpeed * horizontalInput);
     }
 }
