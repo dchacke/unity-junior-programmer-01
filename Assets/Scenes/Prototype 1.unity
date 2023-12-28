@@ -1243,6 +1243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1706355397}
+  offset: {x: 0, y: 5, z: -7}
 --- !u!1 &542583351 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8780424320546655309, guid: 71782582b9d2cac4cba5251a3b767d13, type: 3}
@@ -1344,6 +1345,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputID: 2
+  horsePower: 20
+  turnSpeed: 45
 --- !u!54 &543162961
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3085,6 +3088,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 543162959}
+  offset: {x: 0, y: 5, z: -7}
 --- !u!81 &1376602085
 AudioListener:
   m_ObjectHideFlags: 0
@@ -3675,6 +3679,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputID: 1
+  horsePower: 25000
+  turnSpeed: 45
 --- !u!54 &1706355403
 Rigidbody:
   m_ObjectHideFlags: 0

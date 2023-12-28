@@ -6,10 +6,16 @@ public class PlayerController : MonoBehaviour
 {
     public string inputID;
 
-    [SerializeField] float speed = 20.0f;
+    [SerializeField] float horsePower = 20.0f;
     [SerializeField] float turnSpeed = 45.0f;
     private float forwardInput;
     private float horizontalInput;
+    private Rigidbody rb;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
 
     void FixedUpdate()
     {
@@ -17,7 +23,7 @@ public class PlayerController : MonoBehaviour
         horizontalInput = Input.GetAxis("Horizontal" + inputID);
 
         // Move the vehicle forward based on vertical input
-        transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardInput);
+        rb.AddRelativeForce(Vector3.forward * horsePower * forwardInput);
 
         // Rotate the vehicle based on horizontal input
         transform.Rotate(Vector3.up * Time.deltaTime * turnSpeed * horizontalInput);
