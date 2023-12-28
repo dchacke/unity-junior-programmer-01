@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] float horsePower = 20.0f;
     [SerializeField] float turnSpeed = 45.0f;
+    [SerializeField] GameObject centerOfMass;
     private float forwardInput;
     private float horizontalInput;
     private Rigidbody rb;
@@ -15,6 +16,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        rb.centerOfMass = centerOfMass.transform.position;
     }
 
     void FixedUpdate()
