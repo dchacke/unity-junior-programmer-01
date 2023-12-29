@@ -99,3 +99,10 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# Ignore backups
+/Backups
+
+# Ignore WebGL builds
+/WebGL Builds
+connectwebgl.zip
